@@ -1,6 +1,8 @@
 package com.med.seven.api.endereco;
 
 import jakarta.persistence.Embeddable;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -26,5 +28,32 @@ public class Endereco {
         this.bairro = endereco.bairro();
         this.cidade = endereco.cidade();
         this.uf = endereco.uf();
+    }
+
+    public void atualizar(AtualizaEndereco dados) {
+
+        if (dados.logradouro() != null) {
+            this.logradouro = dados.logradouro();
+        }
+
+        if (dados.numero() != null) {
+            this.numero = dados.numero();
+        }
+
+        if (dados.bairro() != null) {
+            this.bairro = dados.bairro();
+        }
+
+        if (dados.cidade() != null) {
+            this.cidade = dados.cidade();
+        }
+
+        if (dados.uf() != null) {
+            this.uf = dados.uf();
+        }
+
+        if (dados.complemento() != null) {
+            this.complemento = dados.complemento();
+        }
     }
 }
