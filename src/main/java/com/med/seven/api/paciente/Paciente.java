@@ -33,4 +33,25 @@ public class Paciente {
         this.responsavel = paciente.responsavel();
         this.endereco = new Endereco(paciente.endereco());
     }
+
+    public void atualizar(AtualizaPaciente entrada) {
+        if(entrada.nome() != null){
+            this.nome = entrada.nome();
+        }
+        if(entrada.email() != null){
+            this.email = entrada.email();
+        }
+        if(entrada.datanasc() != null){
+            this.datanasc = entrada.datanasc();
+        }
+        if(entrada.telefone() != null){
+            this.telefone = entrada.telefone();
+        }
+        if(entrada.responsavel() != null){
+            this.responsavel = entrada.responsavel();
+        }
+        if(entrada.endereco() != null){
+            this.endereco.atualizar(entrada.endereco());
+        }
+    }
 }

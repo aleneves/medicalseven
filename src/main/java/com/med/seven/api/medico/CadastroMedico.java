@@ -14,6 +14,10 @@ public record CadastroMedico(
         @Email
         String email,
         @NotBlank
+        @Pattern(
+                regexp = "^\\(?[1-9]{2}\\)?\\s?9?\\d{4}-?\\d{4}$",
+                message = "Telefone inválido"
+        )
         String telefone,
         @NotBlank
         @Pattern(regexp="\\d{4,6}")
