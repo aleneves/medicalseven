@@ -1,6 +1,6 @@
-package com.med.seven.api.paciente;
+package com.med.seven.api.domain.paciente;
 
-import com.med.seven.api.endereco.Endereco;
+import com.med.seven.api.domain.endereco.Endereco;
 
 public record DadosRetornoPaciente(Long id, String nome, String datanasc, String email, String telefone, String responsavel, Endereco endereco) {
 

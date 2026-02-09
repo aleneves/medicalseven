@@ -1,6 +1,6 @@
 package com.med.seven.api.controller;
 
-import com.med.seven.api.medico.*;
+import com.med.seven.api.domain.medico.*;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +32,12 @@ public class MedicoController {
     public ResponseEntity<Page<ConsultaMedico>> listarTodos(@PageableDefault(size = 10, sort = {"nome"}) Pageable paginacao){
         var page =  repository.findAll(paginacao).map(ConsultaMedico::new);
         return ResponseEntity.ok(page);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity detalhar(@PathVariable Long id){
+        var medico = repository.getReferenceById(id);
+        return ResponseEntity.ok(new DadosRetornoMedico(medico));
     }
 
     @PatchMapping("/{id}")

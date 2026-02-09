@@ -1,6 +1,6 @@
-package com.med.seven.api.paciente;
+package com.med.seven.api.domain.paciente;
 
-import com.med.seven.api.endereco.AtualizaEndereco;
+import com.med.seven.api.domain.endereco.AtualizaEndereco;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Pattern;
 

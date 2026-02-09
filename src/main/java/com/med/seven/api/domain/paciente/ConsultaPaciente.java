@@ -1,4 +1,4 @@
-package com.med.seven.api.paciente;
+package com.med.seven.api.domain.paciente;
 
 public record ConsultaPaciente(Long id, String nome, String email, String datanasc, String responsavel) {
 

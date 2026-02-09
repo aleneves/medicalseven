@@ -1,4 +1,4 @@
-package com.med.seven.api.medico;
+package com.med.seven.api.domain.medico;
 
 public record ConsultaMedico(Long id, String nome, String crm, String email, Especialidade especialidade) {
 
