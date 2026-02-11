@@ -1,6 +1,5 @@
-package com.med.seven.api.infra;
+package com.med.seven.api.infra.exception;
 
-import com.med.seven.api.domain.medico.DadosRetornoMedico;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
