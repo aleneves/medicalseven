@@ -1,4 +1,4 @@
-package com.med.seven.api.medico;
+package com.med.seven.api.domain.medico;
 
 public enum Especialidade {
     ORTOPEDIA,

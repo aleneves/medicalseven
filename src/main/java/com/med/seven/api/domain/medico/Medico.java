@@ -1,8 +1,7 @@
-package com.med.seven.api.medico;
+package com.med.seven.api.domain.medico;
 
-import com.med.seven.api.endereco.Endereco;
+import com.med.seven.api.domain.endereco.Endereco;
 import jakarta.persistence.*;
-import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

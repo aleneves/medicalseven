@@ -1,8 +1,6 @@
-package com.med.seven.api.medico;
+package com.med.seven.api.domain.medico;
 
-import com.med.seven.api.endereco.AtualizaEndereco;
-import com.med.seven.api.endereco.CadastroEndereco;
-import jakarta.validation.constraints.NotNull;
+import com.med.seven.api.domain.endereco.AtualizaEndereco;
 import jakarta.validation.constraints.Pattern;
 
 public record AtualizaMedico(

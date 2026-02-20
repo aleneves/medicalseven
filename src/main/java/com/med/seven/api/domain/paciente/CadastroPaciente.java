@@ -1,6 +1,6 @@
-package com.med.seven.api.paciente;
+package com.med.seven.api.domain.paciente;
 
-import com.med.seven.api.endereco.CadastroEndereco;
+import com.med.seven.api.domain.endereco.CadastroEndereco;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -20,8 +20,10 @@ public record CadastroPaciente(
         @Email
         String email,
         @NotBlank
-        @Pattern(regexp = "^\\(?[1-9]{2}\\)?\\s?9?\\d{4}-?\\d{4}$")
-        String telefone,
+        @Pattern(
+                regexp = "^\\(?[1-9]{2}\\)?\\s?9?\\d{4}-?\\d{4}$",
+                message = "Telefone inválido"
+        )        String telefone,
         @NotBlank
         String responsavel,
         @NotNull

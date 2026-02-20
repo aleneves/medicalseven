@@ -1,4 +1,4 @@
-package com.med.seven.api.paciente;
+package com.med.seven.api.domain.paciente;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
