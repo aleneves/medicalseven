@@ -1,5 +1,6 @@
 package com.med.seven.api.infra.exception;
 
+import com.med.seven.api.domain.exception.ValidacaoAgendamento;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -44,6 +45,11 @@ public class TratamentoErros {
     @ExceptionHandler(AccessDeniedException.class)
     public ResponseEntity tratarErroAcessoNegado() {
         return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Acesso negado");
+    }
+
+    @ExceptionHandler(ValidacaoAgendamento.class)
+    public ResponseEntity tratarErroValidacaoAgendamento(ValidacaoAgendamento ex) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ex.getMessage());
     }
 
     @ExceptionHandler(Exception.class)
